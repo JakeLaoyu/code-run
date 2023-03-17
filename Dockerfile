@@ -4,7 +4,7 @@ ENV TZ=Asia/Shanghai
 COPY . /code-run
 WORKDIR /code-run
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 RUN npm run build
 
 # simplify
