@@ -21,13 +21,10 @@ const suffixMap = {
 
 const handlePreviewDoc = doc => {
   return doc
-    .replace('<script src="/code-run-online/base/index.js"></script>', '')
-    .replace('<script src="/code-run-online/console/index.js"></script>', '')
-    .replace(/".\/lib/gim, '"https://wanglin2.github.io/code-run-online/lib')
-    .replace(
-      /"\/code-run-online\/lib/gim,
-      '"https://wanglin2.github.io/code-run-online/lib'
-    )
+    .replace('<script src="/base/index.js"></script>', '')
+    .replace('<script src="/console/index.js"></script>', '')
+    .replace(/".\/lib/gim, '"https://wanglin2.github.io/lib')
+    .replace(/"\/lib/gim, '"https://wanglin2.github.io/lib')
 }
 
 const handleNormal = async data => {
