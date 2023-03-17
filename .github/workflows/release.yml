@@ -3,8 +3,8 @@ name: release
 on:
   push:
     branches:
-      - "release/*.*.*"
-      - "pre-release/*.*.*"
+      - 'release/*.*.*'
+      - 'pre-release/*.*.*'
 
 jobs:
   docker:
@@ -38,7 +38,7 @@ jobs:
           # file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: jakeee/qim:latest, jakeee/qim:${{ env.VERSION }}
+          tags: jakeee/code-run:latest, jakeee/code-run:${{ env.VERSION }}
 
   release:
     needs: [docker]
